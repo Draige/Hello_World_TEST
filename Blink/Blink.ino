@@ -11,19 +11,22 @@
 
   modified 8 May 2014
   by Scott Fitzgerald
- */
+*/
 
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin 13 as an output.
+  Serial.begin(9600);
   pinMode(13, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
+  Serial.println("LIGHT ON");
   digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);              // wait for a second
+  
+  Serial.println("LIGHT OFF");
   digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);              // wait for a second
 }
